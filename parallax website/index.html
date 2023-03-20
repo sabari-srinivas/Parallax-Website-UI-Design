@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARALLAX WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="Logo">LOGO</a>
+        <ul >
+            <li><a href="#" class="active">Home</a></li>   
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountains_back.png" id="mountains_back">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error quae culpa sapiente saepe reprehenderit facilis fuga inventore. Incidunt, ab eveniet enim perferendis animi qui cumque inventore, aspernatur non amet similique.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sed nisi ab voluptates corporis illum quas nulla fuga id aliquam ex, facilis iste ut itaque quae sequi quam architecto reiciendis?<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius blanditiis quo odit unde laudantium. Optio autem totam tenetur tempora fugit illum sequi architecto deleniti culpa. Numquam autem architecto deserunt unde!<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet impedit at reprehenderit soluta ut, beatae omnis animi cum itaque labore architecto dolorem consectetur magnam dicta adipisci voluptates quia eligendi mollitia.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt officiis fuga deleniti! Delectus, dolorem amet exercitationem nobis reiciendis voluptatem dolore iste itaque sit, eius maxime mollitia, totam quia iusto.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente alias, ad cupiditate molestiae beatae temporibus in nostrum! Necessitatibus impedit accusamus inventore explicabo, vitae ut. Quod tenetur vel nam mollitia voluptatem.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, consectetur autem. Magni adipisci, expedita beatae nesciunt repellendus dolore accusantium natus temporibus, similique quod neque dolorum maxime et! Nulla, hic error.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque accusantium adipisci nisi expedita minus! Atque, vero placeat voluptatem pariatur, laboriosam, quas inventore veniam commodi ducimus dolore nostrum quaerat doloribus ea?<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus odio ipsam architecto porro, ex sequi commodi tempore distinctio, repellat cupiditate optio corrupti iusto eaque blanditiis magni eum nesciunt totam obcaecati.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae consequatur sit officia, illo nam beatae voluptates, totam earum aperiam quasi eligendi architecto praesentium incidunt distinctio error optio cum temporibus veniam!</p>
+    </div>
+
+    <script>
+        let stars=document.getElementById('stars');
+        let moon=document.getElementById("moon");
+        let mountains_back=document.getElementById("mountains_back");
+        let mountains_front=document.getElementById("mountains_front");
+        let btn=document.getElementById("btn");
+        let text=document.getElementById("text");
+        let sec=document.getElementById("sec");
+        let header=document.querySelector("header");
+        window.addEventListener('scroll',function()
+        {
+            let value =window.scrollY;
+            stars.style.left= value*0.25 +'px';
+            moon.style.top= value*1.05 +'px';
+            mountains_back.style.top= value*0.5 +'px';
+            mountains_front.style.top= value*0 +'px';
+            text.style.right= value*4 +'px';
+            btn.style.marginTop= value*1.5 +'px';
+            text.style.marginTop= value*1.5 +'px';
+            header.style.top=value*0.5+'px';
+        })
+    </script>
+    
+</body>
+</html>
